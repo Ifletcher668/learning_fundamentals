@@ -1,0 +1,126 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body,
+.root {
+    display: flex;
+    flex-flow: row wrap;
+}
+/* .root > * {
+    flex: 1 100%;
+} */
+/* maybe you don't need this? */
+
+.header,
+.footer {
+    flex: 1 100%; /* this sets flex grow to 1, flex shrink to 0, and flex-basis (since row, uses width) to 100%*/
+}
+
+.header {
+    /* set to flex by container class */
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: goldenrod;
+    order: 1;
+}
+.site-title,
+.navbar {
+    margin: 1rem;
+}
+
+.navbar .site-nav {
+    margin: 0.5em;
+    flex: 1 0 auto;
+    list-style: none;
+}
+
+.nav-1 {
+    background-color: rgb(122, 17, 105);
+}
+.nav-2 {
+    background-color: rgb(255, 99, 71);
+}
+.nav-3 {
+    background-color: rgb(255, 255, 255);
+}
+.nav-4 {
+    background-color: rgb(184, 41, 41);
+}
+.nav-5 {
+    background-color: rgb(35, 133, 59);
+}
+
+.primary-content {
+    flex: 3;
+    order: 3;
+    background-color: tomato;
+}
+
+.sidebar-right,
+.sidebar-left {
+    flex: 1;
+    background-color: turquoise;
+}
+.sidebar-right {
+    order: 2;
+}
+.sidebar-left {
+    order: 4;
+}
+.cards {
+    order: 5;
+}
+.card-left,
+.card-right {
+    background-color: wheat;
+    flex: 1;
+    border: 1px solid black;
+}
+
+.footer {
+    background-color: purple;
+    order: 6;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@media (max-width: 1100px) {
+    .primary-content {
+        flex: 1 auto;
+    }
+    .sidebar-right,
+    .sidebar-left {
+        flex: 1 0;
+        border: 1px solid black;
+    }
+    .primary-content {
+        order: 2;
+    }
+    .sidebar-right {
+        order: 3;
+    }
+    .sidebar-left {
+        order: 4;
+    }
+    .card-left {
+        order: 1;
+    }
+    .card-right {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-right,
+    .sidebar-left,
+    .card-left,
+    .card-right {
+        flex: 1 auto;
+    }
+}
