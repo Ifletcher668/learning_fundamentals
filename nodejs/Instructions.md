@@ -1,10 +1,15 @@
 As always start with the command, npm init -y
+Initialize typescript configuration file: npx tsc --init
 
 -   Install typescript with: npm i typescript --save-dev
 -   Install nodemon with: npm i nodemon --save-dev
 -   Install ts-node with: npm i ts-node --save-dev
 
+-   This project specifically has these packages:
+-   formidable: npm i formidable
+
 Dependencies:
+
 {
 "name": "nodejs",
 "version": "1.0.0",
@@ -22,6 +27,8 @@ Dependencies:
 "typescript": "^3.9.5"
 },
 "dependencies": {
-"@types/node": "^14.0.13"
+"@types/formidable": "^1.0.31",
+"@types/node": "^14.0.13",
+"formidable": "^1.2.2"
 }
 }
