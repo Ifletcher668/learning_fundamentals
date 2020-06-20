@@ -9,14 +9,10 @@ body,
     display: flex;
     flex-flow: row wrap;
 }
-/* .root > * {
-    flex: 1 100%;
-} */
-/* maybe you don't need this? */
 
 .header,
 .footer {
-    flex: 1 100%; /* this sets flex grow to 1, flex shrink to 0, and flex-basis (since row, uses width) to 100%*/
+    flex: 1 100%;
 }
 
 .header {
